@@ -57,6 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+	
     .state('tab.friend-detail', {
       url: '/friend/:friendId',
       views: {
@@ -75,8 +76,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'SearchCtrl'
         }
       }
-    });
-
+    })
+	
+	 .state('tab.search-detail', {
+      url: '/search/:searchId',
+      views: {
+        'tab-search': {
+          templateUrl: 'templates/search-detail.html',
+          controller: 'SearchDetailCtrl'
+        }
+      }
+    })
+	
+	
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
 

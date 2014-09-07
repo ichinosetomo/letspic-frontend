@@ -16,4 +16,8 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+
 </widget>

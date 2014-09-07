@@ -12,4 +12,22 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SearchCtrl', function($scope) {
-});
+	
+})
+
+
+.controller('SearchDetailCtrl', function($scope,$stateParams,Friends) {
+	$scope.getImage = function getImage() {
+			navigator.camera.getPicture(onSuccess, onFailure, {
+				destinationType: navigator.camera.DestinationType.FILE_URI,
+				sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+			});
+			};
+	$scope.onSuccess = function onSuccess(imageURI) {
+			alert("Image location is:"+ imageURI);
+		};
+	$scope.onFailure = function onFailure(message) {
+			alert("Get image failed: " + message);
+		};
+})
+
